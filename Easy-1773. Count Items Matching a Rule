@@ -1,0 +1,19 @@
+class Solution {
+    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int temp = 0;
+        if (ruleKey.equals("color")){
+            temp = 1;
+        }
+        if (ruleKey.equals("name")){
+            temp = 2;
+        }
+        int answer = 0;
+        for (int i = 0; i < items.size(); i++){
+            String temp_string = items.get(i).get(temp);
+            if (temp_string.equals(ruleValue)){
+                answer += 1;
+            }
+        }
+        return answer;
+    }
+}
