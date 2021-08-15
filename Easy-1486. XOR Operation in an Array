@@ -1,0 +1,17 @@
+class Solution {
+    public int xorOperation(int n, int start) {
+        int answer = 0;
+        int [] temp = new int[n];
+        
+        for (int i = 0; i < n; i++)
+        {
+            temp[i] = start+2*i;
+        }
+        
+        for(int j = 0; j < n; j++)
+        {
+            answer ^= temp[j];
+        }
+        return answer;
+    }
+}
